@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <script>
+      (function() {
+        const _origErr = console.error;
+        console.error = function() {
+          var firstArg = arguments[0];
+          if (typeof firstArg === 'string' && (firstArg.includes('[vite] failed to connect to websocket') || firstArg.includes('[vite] connect'))) {
+            return;
+          }
+          return _origErr.apply(console, arguments);
+        };
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>PULSE.AI — Fitness & AI Coach</title>
+    <meta name="description" content="Aplicación profesional de gimnasio y fitness con autenticación, selector de idioma, perfil con fotos, kg, medidas y récords de gym, menú principal personalizable, entrenamiento de gym y deportes, coach de IA y seguimiento de progreso interactivo." />
+    <meta property="og:title" content="PULSE.AI — Fitness & AI Coach" />
+    <meta property="og:description" content="Aplicación profesional de gimnasio y fitness con autenticación, selector de idioma, perfil con fotos, kg, medidas y récords de gym, menú principal personalizable, entrenamiento de gym y deportes, coach de IA y seguimiento de progreso interactivo." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- PWA & Mobile Web Meta Tags -->
+    <meta name="theme-color" content="#07090e" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="PULSE.AI" />
+    <meta name="application-name" content="PULSE.AI" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#0b0e14] text-[#f3f4f6] antialiased selection:bg-[#b6f047] selection:text-black">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,63 @@
+{
+  "id": "/",
+  "name": "PULSE.AI — Fitness & AI Coach",
+  "short_name": "PULSE.AI",
+  "description": "Entrena de forma más inteligente con tu entrenador de IA. Registro de actividad deportiva, rutinas de gimnasio y métricas.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "categories": ["fitness", "health", "sports", "lifestyle"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Registrar Actividad",
+      "short_name": "Entrenar",
+      "description": "Inicia un nuevo entrenamiento o registra una sesión",
+      "url": "/?tab=log",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Entrenador IA",
+      "short_name": "Coach",
+      "description": "Habla con tu entrenador personalizado de IA",
+      "url": "/?tab=coach",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Gimnasio y Rutinas",
+      "short_name": "Gym",
+      "description": "Biblioteca de ejercicios y registro de series",
+      "url": "/?tab=gym",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=app.lovable.pulseai.fitness",
+      "id": "app.lovable.pulseai.fitness"
+    }
+  ]
+}

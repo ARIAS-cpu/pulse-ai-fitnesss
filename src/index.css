@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0b0e14;
+    color: #f3f4f6;
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+::-webkit-scrollbar-thumb {
+  background: #212936;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Athletic Glow and Gradients */
+.glow-primary {
+  box-shadow: 0 0 25px -5px rgba(182, 240, 71, 0.35);
+}
+
+.glow-card {
+  box-shadow: 0 8px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+.gradient-volt {
+  background: linear-gradient(135deg, #d9ff55 0%, #b6f047 50%, #72db1a 100%);
+}
+
+.gradient-hero {
+  background: radial-gradient(120% 120% at 20% 0%, #1e293b 0%, #0f172a 50%, #0b0e14 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%);
+}
+
+/* Keyframe animations */
+@keyframes shimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Prose for AI Coach markdown */
+.prose-coach p {
+  margin-bottom: 0.5rem;
+}
+.prose-coach ul, .prose-coach ol {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+.prose-coach li {
+  margin-bottom: 0.25rem;
+}
+.prose-coach strong {
+  color: #b6f047;
+  font-weight: 600;
+}
+.prose-coach h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+}
